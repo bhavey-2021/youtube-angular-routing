@@ -1,0 +1,87 @@
+<p>ngfor works!</p>
+<p>ngFor is used to show the array items </p>
+<div class="container">
+  <!-- <div class="row">
+    <div class="col-md-8">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              Sr.no
+            </th>
+            <th>
+              Product Image
+            </th>
+            <th>
+              Product Name
+            </th>
+            <th>
+              Product ID
+            </th>
+            <th>
+              Product Price
+            </th>
+          </tr>
+        </thead>
+        <hr>
+        <tbody>
+          <tr *ngFor="let mypro of products ; index as a">
+            <td>
+              # {{a+1}}
+            </td>
+            <td>
+              <img src="{{mypro.proimg}}" width="60" alt="">
+            </td>
+            <td>
+              {{mypro.name}}
+            </td>
+            <td>
+              {{mypro.id}}
+            </td>
+            <td>
+              {{mypro.price}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+<br>
+  <div class="row">
+  <div class="col-md-3">
+    <input type="text" name="" class="form-control" #uname placeholder="User Name">
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="onCreateUser(uname)">Create User</button>
+    <!--to enable the button move values from the client to
+    webpage , we need to make a method of the button -->
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-danger" (click)="onRemoveUser()">Remove</button>
+    <!--to enable the button move values from the client to
+    webpage , we need to make a method of the button -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10">
+    <table class="table">
+      <thead class="thead-dark">
+          <tr>
+            <th> UserName </th>
+            <th> Remove </th>
+          </tr>
+      </thead>
+      <tbody>
+        <!-- since we will be dynamicaly adding user , so we *ngfor here -->
+         <tr *ngFor="let user of users"> <!--"users" linked to ts file -->
+          <td>
+            {{user.name }}<!--interpolation to enable dynamic properties-->
+          </td>
+         </tr>
+      </tbody>
+    </table>
+    </div>
+   </div>
+</div>
+<!--"let": is used before declaring a variable-->
+

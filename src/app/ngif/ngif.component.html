@@ -1,0 +1,23 @@
+<p>ngif works!</p>
+
+<div class="container">
+  <button class="btn btn-success" (click)="onCreateBlock()">Create Block</button>
+ <br>
+  <!--we have created a propert by the name "isValid"-->
+  <!--ngIf will show the above line once the statement is true -->
+  <!--we need to create a method on the button
+  to ensure that once the button is clicked
+  we can get a message on the screen -->
+  <div *ngIf="isValid;then thenblock else elseblock"></div>
+    <ng-template #thenblock >
+      Block has been created by the name "myBlock"
+    </ng-template>
+
+    <ng-template #elseblock>
+      <div>No block has bee created yet ! </div>
+    </ng-template>
+<!--if our condition is true , i.e. block is made then
+we will get to the the content of "thenblock" , else
+we will get to see the content of "elsebloack"-->
+</div>
+

@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-md-4">
+    <select class=form-contol (change)="getProductVal($event)">
+      <option value="Default">Select a product</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+        <option value="Washing Machile">Washing Machile</option>
+
+    </select>
+  </div>
+  <div>
+    <!--to show the selected item as text on web page we use "ngSwitch"-->
+    <div class="col-md-12" [ngSwitch]="selectedProduct">
+      <h2 class="text-success" *ngSwitchCase=>Please select a product</h2>
+      <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
+      <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>
+      <h2 class="text-success" *ngSwitchCase="'TV'">TV</h2>
+      <h2 class="text-success" *ngSwitchCase="'Washing Machile'">Washing Machile</h2>
+    </div>
+  </div>
+</div>

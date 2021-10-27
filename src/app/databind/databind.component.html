@@ -1,0 +1,40 @@
+<!-- <p>Hello {{dynName}} !</p>
+<br>
+{{5+9}}
+<br>
+<br>
+{{"Welcome" + dynName }}
+<br>
+<br>
+{{dynName.length}}
+<br>
+<br>
+{{myMethod()}}
+<br>
+<br> -->
+<!--ternary operator is used below -->
+<!-- My app is {{appStatus? status1:status2}} -->
+
+
+
+<!-- <input type="text" name="id" value="{{dynName}}"> -->
+
+<!--now by using property binding ...-->
+
+<input type="text" name="id" [value]="dynName">
+<!-- in interpolation only string are allowed , but in propert binding ...
+non string values are also allowed-->
+
+<!-- for example "disabled" is a feature of property binding -->
+<br><br>
+<input type="text" disabled name="id" [value]="dynName"><==This can't be edited xD
+<br><br>
+
+
+
+
+
+
+
+
+
