@@ -1,10 +1,14 @@
 <header>
   <nav>
     <ul class="nav nav-tabs">
-      <li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
-      <li class="nav-item"><a class="nav-link " routerLink="about/">About Us</a></li>
-      <li class="nav-item"><a class="nav-link " routerLink="products/">Products</a></li>
-      <li class="nav-item"><a class="nav-link " routerLink="contact/">Contacts</a></li>
+      <!--to switch the active class we can include "routerlinkactive"-->
+      <li class="nav-item"><a class="nav-link " routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+      <!--we see that home is always active , hence to remove this we have done the following : "[routerLinkActiveOptions]"-->
+      <!--we use property binding's [] as we are going to pass 'js' object  -->
+      <!--exact:true will make the route active only when it will get the exact route of home , else it will not let it run -->
+      <li class="nav-item"><a class="nav-link "  routerLinkActive="active" routerLink="about/">About Us</a></li>
+      <li class="nav-item"><a class="nav-link " routerLinkActive="active"  routerLink="products/">Products</a></li>
+      <li class="nav-item"><a class="nav-link "  routerLinkActive="active" routerLink="contact/">Contacts</a></li>
     </ul>
   </nav>
 </header>
