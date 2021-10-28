@@ -27,4 +27,7 @@ export class NgforComponent implements OnInit {
   {
     this.users.splice(this.users.length-1);//this will remove the added user from the last one added
   }
+  onRemoveItem(item: number){
+    this.users.splice(item , 1 );
+  }
 }

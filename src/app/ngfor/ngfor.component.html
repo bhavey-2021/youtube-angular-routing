@@ -73,9 +73,12 @@
       </thead>
       <tbody>
         <!-- since we will be dynamicaly adding user , so we *ngfor here -->
-         <tr *ngFor="let user of users"> <!--"users" linked to ts file -->
+         <tr *ngFor="let user of users ; index as i"> <!--"users" linked to ts file -->
           <td>
             {{user.name }}<!--interpolation to enable dynamic properties-->
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="onRemoveItem(i)">Remove</button>
           </td>
          </tr>
       </tbody>
