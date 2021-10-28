@@ -1,4 +1,18 @@
-<app-ngfor></app-ngfor>
-
-<br>
-
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link active" routerLink="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link " routerLink="about/">About Us</a></li>
+      <li class="nav-item"><a class="nav-link " routerLink="products/">Products</a></li>
+      <li class="nav-item"><a class="nav-link " routerLink="contact/">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- <app-home></app-home> -->
+<!-- <app-products></app-products> -->
+<!--<app-about></app-about>-->
+<!--<app-contact></app-contact>-->
+<!-- WE NEED TO MAKE WEBSITE DYNAMIC WITH
+    CLICK TO SHOW PAGE -->
+<router-outlet></router-outlet><!--this will help load the selected route dynamicaly-->
+<!-- "router-outlet" is a reserve directive -->
