@@ -17,13 +17,20 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 //whenever we make routes we need make a constant
 const appRoutes:Routes=[
-  {path:'' , component : HomeComponent}, //this will make the home component defaulty open
+  {path:'' , redirectTo:'login' , pathMatch:'full'}, //this will make the page redirect to login by default
+
+  {path:'login' , component : LoginComponent},
+  {path:'home' , component : HomeComponent},
   {path:'about' , component : AboutComponent},
   {path:'contact' , component : ContactComponent},
-  {path:'products' , component : ProductsComponent}
+  {path:'products' , component : ProductsComponent},
+  {path:'**' , component : PageNotFoundComponent}
+  // "**" : when no other route matched the website will redirect to '**'
 ]//each route will be as a java script object
 
 @NgModule({
@@ -39,7 +46,9 @@ const appRoutes:Routes=[
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes)   ,
